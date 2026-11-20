@@ -20,6 +20,7 @@
   --danger: #b42318;
   --danger-soft: #fdecea;
   --focus: #256609;
+  --brand-line: #4a8030;
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -227,4 +228,13 @@ textarea.ics-input { min-height: 112px; resize: vertical; }
   .proj h3 { font-size: 20px; line-height: 26px; }
   .proj p { font-size: 15px; line-height: 22px; }
   .tl-row { grid-template-columns: 96px minmax(0, 1fr); gap: 16px; }
+}
+
+/* Início: patrocínio e destaque */
+.opt { padding: 28px; border: 1px solid var(--brand-line); border-radius: 18px; }
+.num { font-family: var(--font-display); font-weight: 600; color: var(--lime); font-size: 20px; line-height: 28px; }
+
+@media (max-width: 900px) {
+  .feat { padding: 16px !important; gap: 20px !important; }
+  .opt { padding: 20px; }
 }

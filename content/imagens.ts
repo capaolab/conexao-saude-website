@@ -61,6 +61,20 @@ export const IMAGENS = {
     altura: 900,
     noCanvas: true,
   },
+  "quem-somos-espaco": {
+    arquivo: "quem-somos-espaco.jpg",
+    alt: "Espaço do instituto no Vale do Capão, com gramado, tenda de circo e a serra ao fundo",
+    largura: 1600,
+    altura: 1200,
+    noCanvas: true,
+  },
+  "quem-somos-historia": {
+    arquivo: "quem-somos-historia.jpg",
+    alt: "Mãos plantando uma muda na terra",
+    largura: 1200,
+    altura: 840,
+    noCanvas: true,
+  },
 } as const satisfies Record<
   string,
   { arquivo: string; alt: string; largura: number; altura: number; noCanvas: boolean }

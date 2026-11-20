@@ -12,3 +12,5 @@ Copie a foto com o nome exato para `public/imagens/`, substituindo o provisório
 | `projeto-circo-capa.jpg` | Capa da página do projeto e cartão em Projetos e Início | Roda de crianças e educador nas aulas de circo | 16:9, 1600 × 900 px (o cartão recorta em 4:3) | Sim |
 | `projeto-ciranda-cultural-capa.jpg` | Capa da página do projeto e cartão em Projetos e Início | Participantes da Ciranda Cultural reunidas em comunidade quilombola | 16:9, 1600 × 900 px (o cartão recorta em 4:3) | Sim |
 | `projeto-yurta-curumim-capa.jpg` | Capa da página do projeto e cartão em Projetos e Início | Educadora e crianças em roda dentro da yurta | 16:9, 1600 × 900 px (o cartão recorta em 4:3) | Sim |
+| `quem-somos-espaco.jpg` | Quem somos, abertura | Espaço do instituto no Vale do Capão, com gramado, tenda de circo e a serra ao fundo | 4:3, 1600 × 1200 px | Sim |
+| `quem-somos-historia.jpg` | Quem somos, seção Nossa história (some no celular) | Mãos plantando uma muda na terra | 10:7, 1200 × 840 px | Sim |
