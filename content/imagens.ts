@@ -1,9 +1,9 @@
-// Mapa de imagens do site. Cada entrada precisa ter as chaves arquivo, largura e altura,
-// cada uma em sua própria linha, com string entre aspas duplas e números literais
-// (formato das entradas abaixo). O nome do arquivo usa minúsculas, sem acento, com hífens;
-// .jpg para foto, .png para logo.
-// scripts/gerar-placeholders.mjs lê este arquivo como texto (regex) e cria o provisório em
-// public/imagens/ se ainda não existir. Toda entrada nova também entra em docs/imagens.md.
+// Mapa de imagens do site. Para cada foto nova, acrescente uma entrada abaixo e uma linha
+// na tabela de docs/imagens.md. O arquivo usa minúsculas, sem acento, com hífens
+// (.jpg para foto, .png para logo). largura/altura são em px; noCanvas diz se o canvas
+// já tem a foto. `npm run imagens:placeholders` importa este arquivo (Node 24 remove os
+// tipos nativamente: use só sintaxe apagável, sem enum/namespace) e cria o provisório em
+// public/imagens/ quando ainda não existe.
 export const IMAGENS = {
   logo: {
     arquivo: "logo.png",

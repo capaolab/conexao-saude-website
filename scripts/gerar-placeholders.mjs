@@ -1,27 +1,18 @@
-import { existsSync, mkdirSync, readFileSync } from "node:fs";
+import { existsSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
+import { IMAGENS } from "../content/imagens.ts";
 
 const raiz = join(dirname(fileURLToPath(import.meta.url)), "..");
-const fonte = readFileSync(join(raiz, "content/imagens.ts"), "utf8");
 const pasta = join(raiz, "public/imagens");
 mkdirSync(pasta, { recursive: true });
-
-const entradas = [
-  ...fonte.matchAll(
-    /arquivo:\s*"([^"]+)",[\s\S]*?largura:\s*(\d+),[\s\S]*?altura:\s*(\d+),/g,
-  ),
-];
-
-for (const [, arquivo, l, a] of entradas) {
+for (const { arquivo, largura, altura } of Object.values(IMAGENS)) {
   const destino = join(pasta, arquivo);
   if (existsSync(destino)) {
     console.log(`existe, mantido: ${arquivo}`);
     continue;
   }
-  const largura = Number(l);
-  const altura = Number(a);
   const fs = Math.max(8, Math.round(Math.min(largura / 12, altura / 6)));
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${largura}" height="${altura}">
 <rect width="100%" height="100%" fill="#e6ead6"/>
