@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: .
+      target: dev
+    volumes:
+      - ./:/app
+      - /app/node_modules
+      - /app/.next
+    ports:
+      - "${APP_PORT:-3000}:3000"

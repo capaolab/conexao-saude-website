@@ -1,3 +1,5 @@
+@AGENTS.md
+
 # conexao-saude-website
 
 Site do instituto Conexão Saúde (landing page, blog, login). Primeiro site sobre o capaolab-core. Ainda sem código.
