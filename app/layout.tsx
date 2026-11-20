@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { fredoka, nunito } from "@/lib/fontes";
+import Cabecalho from "@/components/Cabecalho";
+import Rodape from "@/components/Rodape";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -16,7 +18,11 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR" className={`${fredoka.variable} ${nunito.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Cabecalho />
+        <main>{children}</main>
+        <Rodape />
+      </body>
     </html>
   );
 }
