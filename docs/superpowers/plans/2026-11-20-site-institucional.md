@@ -6,7 +6,7 @@
 
 **Architecture:** App Router com páginas estáticas (sem dados da API). Conteúdo tipado em `content/`, lógica de contato em `lib/contato.ts`, casca comum (header, menu do celular, rodapé, imagem/placeholder) em `components/`. Visual vem dos tokens e classes `ics-*` do design system, portados para `app/globals.css`.
 
-**Tech Stack:** Next.js 16.3.5, React 19.2.8, TypeScript 5, Tailwind CSS 4, Vitest 4.1.11 + Testing Library + jsdom, vitest-axe, npm, Node 24.11.0, Docker.
+**Tech Stack:** Next.js 16.4.6, React 19.2.8, TypeScript 5, Tailwind CSS 4, Vitest 4.1.12 + Testing Library + jsdom, vitest-axe, npm, Node 24.11.0, Docker.
 
 **Spec:** `docs/superpowers/specs/2026-11-20-site-institucional-design.md`
 
@@ -40,9 +40,9 @@
 - Test: `tests/sanidade.test.ts`
 
 - [ ] **Step 1:** Confirme que está na branch `dev` (`git branch --show-current`). Ela já existe, criada a partir da `main`.
-- [ ] **Step 2:** Gere o app com `npx create-next-app@16.3.5` (TypeScript, Tailwind, ESLint, App Router, sem `src/`, alias `@/*`, npm) **numa pasta temporária** (o diretório já tem `README.md`, `CLAUDE.md` e `docs/`, que o create-next-app recusa) e mova os arquivos para a raiz, sem sobrescrever `README.md`. Fixe `next` e `eslint-config-next` em `16.3.5`, `react`/`react-dom` em `19.2.8`, `"engines": {"node": "24.x"}`, `.node-version` = `24.11.0`. Apague os SVGs e o conteúdo de exemplo do template.
+- [ ] **Step 2:** Gere o app com `npx create-next-app@16.3.5` (TypeScript, Tailwind, ESLint, App Router, sem `src/`, alias `@/*`, npm) **numa pasta temporária** (o diretório já tem `README.md`, `CLAUDE.md` e `docs/`, que o create-next-app recusa) e mova os arquivos para a raiz, sem sobrescrever `README.md`. Fixe `next` e `eslint-config-next` em `16.4.6`, `react`/`react-dom` em `19.2.8`, `"engines": {"node": "24.x"}`, `.node-version` = `24.11.0`. Apague os SVGs e o conteúdo de exemplo do template.
 - [ ] **Step 3:** `next.config.ts`: `output: "standalone"`, `devIndicators: false`. Nada condicionado a `VERCEL`.
-- [ ] **Step 4:** Instale os devDependencies de teste: `vitest@4.1.11`, `@vitejs/plugin-react@6.1.1`, `jsdom@30.0.1`, `@testing-library/react@16.3.3`, `@testing-library/dom@10.4.2`, `@testing-library/jest-dom@6.1.1`, `@testing-library/user-event`, `vitest-axe@0.1.0`, `axe-core@4.13.0`. `vitest.config.mts` com ambiente `jsdom`, alias `@` → raiz e `setupFiles: ["tests/setup.ts"]` (importa `@testing-library/jest-dom/vitest`). Script `"test": "vitest --run"`.
+- [ ] **Step 4:** Instale os devDependencies de teste: `vitest@4.1.12`, `@vitejs/plugin-react@6.1.1`, `jsdom@30.0.1`, `@testing-library/react@16.3.3`, `@testing-library/dom@10.4.2`, `@testing-library/jest-dom@6.1.1`, `@testing-library/user-event`, `vitest-axe@0.1.0`, `axe-core@4.13.0`. `vitest.config.mts` com ambiente `jsdom`, alias `@` → raiz e `setupFiles: ["tests/setup.ts"]` (importa `@testing-library/jest-dom/vitest`). Script `"test": "vitest --run"`.
 - [ ] **Step 5:** Escreva `tests/sanidade.test.ts` com `expect(1 + 1).toBe(2)` e rode `npx vitest --run`. Esperado: 1 passed.
 - [ ] **Step 6:** `Dockerfile` com estágios `base` (`node:24.11.0-slim`, usuário `node`), `deps` (`npm ci`), `dev` (`npm run dev`, código montado), `builder` (`npm run build`, sem nenhuma variável de ambiente) e `runner` (copia `public/`, `.next/standalone`, `.next/static`; `CMD ["node", "server.js"]`, `PORT=3000`, `HOSTNAME=0.0.0.0`). Use o `Dockerfile` de `../capao-grande-website` como referência, sem os estágios e comentários do Payload. `.dockerignore` exclui `.env*` (menos `.env.example`), `node_modules`, `.next`, `.git`, `.claude`, `docs`, `tests`.
 - [ ] **Step 7:** `docker-compose.yml` com um serviço `app` (`target: dev`, volumes `./:/app` e `/app/node_modules` e `/app/.next`, porta `${APP_PORT:-3000}:3000`). `.env.example` só com `APP_PORT=3000`.

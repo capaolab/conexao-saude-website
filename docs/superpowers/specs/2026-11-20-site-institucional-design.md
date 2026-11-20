@@ -31,7 +31,7 @@ Slugs dos projetos: `programa-conexao-saude`, `yoga`, `futebol-vale-jogar`, `cor
 
 ## Decisões
 
-- Next.js 16.3.5 (App Router) + React 19 + TypeScript + Tailwind 4, npm, Node 24.11.0 (mesmas versões do capao-grande-website). `output: 'standalone'`.
+- Next.js 16.4.6 (App Router) + React 19 + TypeScript + Tailwind 4, npm, Node 24.11.0 (a 16.3.5 do capao-grande-website tem vulnerabilidade crítica). `output: 'standalone'`.
 - Conteúdo em arquivos TypeScript tipados em `content/`, no repositório. Textos com marcação `[a confirmar]` do canvas são copiados como estão.
 - Contato só por `mailto:` e `wa.me`, a partir de uma configuração única (`lib/contato.ts`). O `mailto:` é montado em JavaScript no clique; sem JavaScript, o link leva a `/contato`, onde o e-mail está escrito. Número do WhatsApp só com dígitos, com DDI e DDD; textos com `encodeURIComponent`.
 - Design system "Instituto Conexão Saúde": tokens como variáveis CSS e tema do Tailwind; componentes `ics-*` (botão, tag, link) portados para CSS global, com os mesmos nomes de classe do canvas.
