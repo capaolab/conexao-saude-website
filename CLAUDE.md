@@ -2,7 +2,7 @@
 
 # conexao-saude-website
 
-Site do instituto Conexão Saúde (landing page, blog, login). Primeiro site sobre o capaolab-core. Ainda sem código.
+Site do instituto Conexão Saúde. Primeiro site sobre o capaolab-core. Hoje: site institucional estático com 12 páginas (Início, Quem somos, Projetos, 7 páginas de projeto, Parcerias, Contato), sem chamada à API. Blog e login ainda não existem.
 
 ## API
 
@@ -12,7 +12,24 @@ Site do instituto Conexão Saúde (landing page, blog, login). Primeiro site sob
 
 ## Comandos
 
-- TODO: definir ao criar o app
+- Dev: `cp .env.example .env && docker compose up -d --build`, ou `npm run dev`
+- Testes: `npx vitest --run`
+- Typecheck: `npx tsc --noEmit`
+- Lint: `npx eslint .`
+- Build: `npm run build`
+
+## Estrutura
+
+- `app/`: rotas (App Router)
+- `content/`: conteúdo das páginas e mapa de imagens (`content/imagens.ts`)
+- `lib/contato.ts`: e-mail e WhatsApp do instituto (links e mensagens)
+- `components/`: componentes do site (cabeçalho, rodapé, projetos)
+- `tests/`: Vitest, inclui a auditoria de links e acessibilidade (`tests/auditoria.test.tsx`)
+
+## Cuidados
+
+- Imagens: nome fixo em `content/imagens.ts` e `docs/imagens.md`; arquivo em `public/imagens/` (provisório gerado por `npm run imagens:placeholders` até a foto real chegar)
+- Nunca `href="mailto:"`: use `<LinkEmail>`; links de WhatsApp vêm de `linkWhatsApp()`
 
 ## Branches
 

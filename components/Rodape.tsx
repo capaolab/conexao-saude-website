@@ -15,7 +15,7 @@ export default function Rodape() {
           </p>
         </div>
         <div>
-          <h4>Navegue</h4>
+          <h2>Navegue</h2>
           <ul>
             {ROTAS_MENU.filter((r) => r.href !== "/").map((r) => (
               <li key={r.href}>
@@ -25,7 +25,7 @@ export default function Rodape() {
           </ul>
         </div>
         <div>
-          <h4>Contato</h4>
+          <h2>Contato</h2>
           <ul>
             <li>
               <LinkEmail assunto="Contato pelo site">E-mail</LinkEmail>

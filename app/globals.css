@@ -191,7 +191,7 @@ textarea.ics-input { min-height: 112px; resize: vertical; }
 .sheet a.it[aria-current="page"] { color: var(--brand); }
 .ft { background: var(--surface-sunken); border-top: 4px solid var(--brand); }
 .ft-in { max-width: var(--container); margin: 0 auto; padding: 56px 40px 32px; box-sizing: border-box; display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr); gap: 40px; }
-.ft h4 { font-family: var(--font-display); font-weight: 600; font-size: 18px; line-height: 24px; margin: 0 0 12px; color: var(--brand); }
+.ft h2 { font-family: var(--font-display); font-weight: 600; font-size: 18px; line-height: 24px; margin: 0 0 12px; color: var(--brand); }
 .ft ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
 .ft ul a { color: var(--ink); text-decoration: none; display: inline-block; padding: 6px 0; }
 .ft ul a:hover { color: var(--brand); text-decoration: underline; }

@@ -2,7 +2,7 @@
 
 Site do instituto Conexão Saúde: landing page, blog e login.
 
-> **Situação:** ainda sem código. É o primeiro site a ser construído sobre o [capaolab-core](https://github.com/capaolab/capaolab-core).
+> **Situação:** site institucional com 12 páginas, sem chamada à API por enquanto. É o primeiro site a ser construído sobre o [capaolab-core](https://github.com/capaolab/capaolab-core).
 
 ## Escopo
 
@@ -34,6 +34,14 @@ Detalhes: decisão [0002 — Frontends, chamadas à API e deploy](https://github
 - Regras de negócio e decisões do projeto: [`capaolab-core/docs/projetos/conexao-saude-website/`](https://github.com/capaolab/capaolab-core/tree/main/docs/projetos/conexao-saude-website)
 - Arquitetura do core e contrato da API: [`capaolab-core/docs/core/`](https://github.com/capaolab/capaolab-core/tree/main/docs/core)
 - O `docs/` deste repositório guarda só design, protótipos e artefatos do frontend
+
+## Como rodar
+
+- Dev com Docker: `cp .env.example .env && docker compose up -d --build`
+- Dev sem Docker: `npm install && npm run dev`
+- Testes: `npx vitest --run`; typecheck: `npx tsc --noEmit`; lint: `npx eslint .`
+- Build: `npm run build`
+- Imagem Docker de produção: `docker build --target runner .`
 
 ## Branches
 
