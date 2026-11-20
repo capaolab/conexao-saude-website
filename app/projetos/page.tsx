@@ -2,33 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ListaProjetos from "@/components/projeto/ListaProjetos";
 import SetaDireita from "@/components/projeto/SetaDireita";
-import { PROJETOS, type Area } from "@/content/projetos";
+import { AREAS_INICIO } from "@/content/inicio";
+import { PROJETOS } from "@/content/projetos";
+import { REALIZADOS } from "@/content/projetos-pagina";
 
 export const metadata: Metadata = { title: "Projetos" };
-
-const FOCOS: { area: Area; nome: string; ods: string; texto: string }[] = [
-  { area: "saude", nome: "Saúde", ods: "ODS 3", texto: "Práticas ao ar livre, alimentação natural, yoga e cuidado integral." },
-  { area: "esporte", nome: "Esporte", ods: "ODS 3, 4, 10", texto: "Futebol e corrida em trilha como formação e cidadania." },
-  { area: "cultura", nome: "Cultura", ods: "ODS 3, 4, 5, 10, 11, 17", texto: "Circo, brincadeiras e valorização da cultura negra e quilombola." },
-  { area: "educacao", nome: "Educação", ods: "ODS 3, 4, 10, 11, 12, 16", texto: "Educação infantil integral, inspirada na pedagogia Waldorf." },
-];
-
-const REALIZADOS = [
-  {
-    ano: "2009–2012",
-    titulo: "Escolinha de Futebol Vale Jogar, 1ª fase",
-    texto:
-      "Avaliação técnica do E.C. Bahia com 3 garotos revelados, equipe oficial do E.C. Bahia e vice-campeonato na Copinha Tricolor.",
-    slug: "futebol-vale-jogar",
-  },
-  {
-    ano: "2026",
-    titulo: "Campeonato Baiano de Corrida em Trilha e Montanha",
-    texto:
-      "Com a TRS Chapada Diamantina e a Federação Bahiana de Atletismo: cerca de 300 atletas de diferentes estados e países.",
-    slug: "corrida-em-trilha",
-  },
-];
 
 const linhaStyle = {
   padding: "24px 0",
@@ -57,7 +35,7 @@ export default function Page() {
             <h2 className="h2">Quatro áreas, um mesmo cuidado</h2>
           </div>
           <div className="cols c4" style={{ gap: 32 }}>
-            {FOCOS.map((f) => {
+            {AREAS_INICIO.map((f) => {
               const n = PROJETOS.filter((p) => p.area === f.area).length;
               return (
                 <div key={f.area} className="rule stack" style={{ gap: 8, borderTop: "3px solid var(--brand)" }}>

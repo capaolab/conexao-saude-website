@@ -2,6 +2,8 @@
 
 Copie cada foto com o nome exato para `public/imagens/`, substituindo o provisório. As fotos estão agrupadas pela página em que aparecem. Uma foto que aparece em várias páginas é listada em cada uma delas, com o mesmo nome de arquivo: basta colar o arquivo uma vez.
 
+Depois de colar as fotos, faça o commit e publique de novo: a pasta `public/` é copiada para dentro da imagem Docker.
+
 ## Todas as páginas
 
 | Arquivo | Onde aparece | Texto alternativo | Proporção / tamanho mínimo | Canvas tem a foto? |

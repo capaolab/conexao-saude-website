@@ -6,11 +6,11 @@ type Props = {
   id: ImagemId;
   className?: string;
   style?: CSSProperties;
-  priority?: boolean;
+  preload?: boolean;
   sizes?: string;
 };
 
-export default function Imagem({ id, className, style, priority, sizes }: Props) {
+export default function Imagem({ id, className, style, preload, sizes }: Props) {
   const { arquivo, alt, largura, altura } = IMAGENS[id];
   return (
     <Image
@@ -20,7 +20,7 @@ export default function Imagem({ id, className, style, priority, sizes }: Props)
       height={altura}
       className={className}
       style={style}
-      priority={priority}
+      preload={preload}
       sizes={sizes}
     />
   );

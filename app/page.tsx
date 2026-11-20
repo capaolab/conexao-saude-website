@@ -34,7 +34,7 @@ export default function Inicio() {
             id="projeto-ciranda-cultural-capa"
             className="img hero-img"
             style={{ height: 560, objectPosition: "center 62%" }}
-            priority
+            preload
             sizes="(max-width: 1240px) 100vw, 1160px"
           />
           <div className="cols c4" style={{ gap: 32 }}>

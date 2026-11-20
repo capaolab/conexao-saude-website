@@ -24,7 +24,7 @@ export default function QuemSomos() {
             id="quem-somos-espaco"
             className="img hero-img"
             style={{ height: 600 }}
-            priority
+            preload
             sizes="(max-width: 900px) 100vw, 540px"
           />
         </div>

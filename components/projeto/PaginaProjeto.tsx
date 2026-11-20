@@ -38,7 +38,7 @@ export default function PaginaProjeto({ projeto }: { projeto: Projeto }) {
             className="img hero-img"
             style={{ height: 520 }}
             sizes="(max-width: 1240px) 100vw, 1160px"
-            priority
+            preload
           />
           <div className="cols c4" style={{ gap: 32 }}>
             {projeto.destaques.map((d) => (

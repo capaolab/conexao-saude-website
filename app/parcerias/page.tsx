@@ -52,7 +52,7 @@ export default function Parcerias() {
             id="projeto-futebol-vale-jogar-capa"
             className="img hero-img"
             style={{ height: 480, objectPosition: "center 40%" }}
-            priority
+            preload
             sizes="(max-width: 1240px) 100vw, 1160px"
           />
         </div>
@@ -283,7 +283,7 @@ export default function Parcerias() {
         <div className="wrap">
           <div
             className="cols c2 panel"
-            style={{ gap: 32, alignItems: "center", background: "var(--brand)", borderRadius: 24, padding: 56 }}
+            style={{ gap: 32, alignItems: "center", background: "var(--brand)", borderRadius: "var(--radius-lg)", padding: 56 }}
           >
             <div className="stack" style={{ gap: 12 }}>
               <p className="over" style={{ color: "var(--lime)" }}>

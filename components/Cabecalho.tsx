@@ -7,7 +7,7 @@ export default function Cabecalho() {
   return (
     <header className="hdr">
       <div className="hdr-in">
-        <Marca />
+        <Marca preload />
         <NavPrincipal />
         <Link href="/parcerias" className="ics-btn ics-btn--highlight ics-btn--sm hdr-cta">
           Apoie

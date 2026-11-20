@@ -26,7 +26,7 @@ export default function Contato() {
           <div className="cols c2" style={{ gap: 24 }}>
             <div
               className="stack panel"
-              style={{ gap: 14, background: "var(--brand)", color: "var(--on-brand)", borderRadius: 24, padding: 40 }}
+              style={{ gap: 14, background: "var(--brand)", color: "var(--on-brand)", borderRadius: "var(--radius-lg)", padding: 40 }}
             >
               <span style={{ color: "var(--lime)" }}>
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -58,7 +58,7 @@ export default function Contato() {
                 gap: 14,
                 background: "var(--surface-raised)",
                 border: "1px solid var(--line)",
-                borderRadius: 24,
+                borderRadius: "var(--radius-lg)",
                 padding: 40,
               }}
             >

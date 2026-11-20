@@ -59,4 +59,23 @@ describe("Cabecalho", () => {
     expect(btn).toHaveAttribute("aria-expanded", "false");
     expect(screen.queryByRole("navigation", { name: "Menu" })).toBeNull();
   });
+
+  it("fecha o menu ao tocar num link da folha, mesmo da página atual", () => {
+    caminho = "/projetos";
+    render(<Cabecalho />);
+    const btn = screen.getByRole("button", { name: "Menu" });
+    fireEvent.click(btn);
+    const folha = screen.getByRole("navigation", { name: "Menu" });
+    fireEvent.click(within(folha).getByRole("link", { name: /Projetos/ }));
+    expect(btn).toHaveAttribute("aria-expanded", "false");
+  });
+
+  it("fecha o menu com Escape e devolve o foco ao botão", () => {
+    render(<Cabecalho />);
+    const btn = screen.getByRole("button", { name: "Menu" });
+    fireEvent.click(btn);
+    fireEvent.keyDown(document, { key: "Escape" });
+    expect(btn).toHaveAttribute("aria-expanded", "false");
+    expect(btn).toHaveFocus();
+  });
 });
