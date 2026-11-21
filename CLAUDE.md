@@ -28,7 +28,7 @@ Site do instituto Conexão Saúde. Primeiro site sobre o capaolab-core. Hoje: si
 
 ## Cuidados
 
-- Imagens: nome fixo em `content/imagens.ts` e `docs/imagens.md`; arquivo em `public/imagens/` (provisório gerado por `npm run imagens:placeholders` até a foto real chegar)
+- Imagens: nome fixo em `content/imagens.ts` e `docs/imagens.md`; arquivo em `public/imagens/` (provisório gerado por `npm run imagens:placeholders` até a foto real chegar). Foto real nova: rode `npm run imagens:otimizar` antes do commit
 - Nunca `href="mailto:"`: use `<LinkEmail>`; links de WhatsApp vêm de `linkWhatsApp()`
 
 ## Branches

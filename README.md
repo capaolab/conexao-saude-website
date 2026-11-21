@@ -43,6 +43,16 @@ Detalhes: decisão [0002 — Frontends, chamadas à API e deploy](https://github
 - Build: `npm run build`
 - Imagem Docker de produção: `docker build --target runner .`
 
+## Imagens
+
+As fotos ficam em `public/imagens/`, com os nomes mapeados em [`docs/imagens.md`](docs/imagens.md).
+
+1. Copie a foto com o nome exato para `public/imagens/`, substituindo o arquivo provisório
+2. Rode `npm run imagens:otimizar`. O script corrige a orientação, limita o lado maior a 2400 px, recomprime e remove os metadados (EXIF, inclusive a localização GPS gravada pelo celular). Foto que já está otimizada fica como está, então dá para rodar quantas vezes quiser. No fim, o script limpa o cache de imagens do Next (`.next/cache/images`): esse cache identifica a foto pelo nome, não pelo conteúdo, e sem a limpeza a foto trocada continuaria aparecendo antiga no dev
+3. Faça o commit e publique de novo: a pasta `public/` vai dentro da imagem Docker
+
+Quem já viu a foto antiga pode continuar vendo-a por até 4 horas (cache do navegador). No dev, recarregue com Ctrl+Shift+R.
+
 ## Branches
 
 - `dev`: branch de integração. Os commits de funcionalidade vão direto para ela

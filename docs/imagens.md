@@ -2,7 +2,7 @@
 
 Copie cada foto com o nome exato para `public/imagens/`, substituindo o provisório. As fotos estão agrupadas pela página em que aparecem. Uma foto que aparece em várias páginas é listada em cada uma delas, com o mesmo nome de arquivo: basta colar o arquivo uma vez.
 
-Depois de colar as fotos, faça o commit e publique de novo: a pasta `public/` é copiada para dentro da imagem Docker.
+Depois de colar as fotos, rode `npm run imagens:otimizar` (reduz o tamanho e remove os metadados, inclusive o GPS), faça o commit e publique de novo: a pasta `public/` é copiada para dentro da imagem Docker.
 
 ## Todas as páginas
 
