@@ -8,6 +8,6 @@ describe("Imagem", () => {
     const img = container.querySelector("img");
     expect(img).not.toBeNull();
     expect(img?.getAttribute("alt")).toBe("");
-    expect(img?.getAttribute("src")).toContain("logo.png");
+    expect(img?.getAttribute("src")).toBe("/imagens/logo.svg");
   });
 });

@@ -8,7 +8,7 @@ Depois de colar as fotos, rode `npm run imagens:otimizar` (reduz o tamanho e rem
 
 | Arquivo | Onde aparece | Texto alternativo | Proporção / tamanho mínimo | Canvas tem a foto? |
 | --- | --- | --- | --- | --- |
-| `logo.png` | Cabeçalho e rodapé (marca) | vazio (o texto da marca está ao lado) | 1:1, 104 × 104 px | Sim |
+| `logo.svg` | Cabeçalho e rodapé (marca) | vazio (o texto da marca está ao lado) | 1:1, vetorial (SVG) | Sim |
 
 ## Início (`/`)
 

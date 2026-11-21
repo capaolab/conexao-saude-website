@@ -11,7 +11,7 @@ const linhasTabela = doc.split("\n").filter((l) => l.trim().startsWith("|"));
 describe("mapa de imagens", () => {
   it("nomes de arquivo válidos e únicos", () => {
     for (const a of arquivos) {
-      expect(a).toMatch(/^[a-z0-9]+(-[a-z0-9]+)*\.(jpg|png)$/);
+      expect(a).toMatch(/^[a-z0-9]+(-[a-z0-9]+)*\.(jpg|png|svg)$/);
     }
     expect(new Set(arquivos).size).toBe(arquivos.length);
   });
