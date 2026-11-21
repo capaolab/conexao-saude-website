@@ -30,6 +30,8 @@ Site do instituto Conexão Saúde. Primeiro site sobre o capaolab-core. Hoje: si
 
 - Imagens: nome fixo em `content/imagens.ts` e `docs/imagens.md`; arquivo em `public/imagens/` (provisório gerado por `npm run imagens:placeholders` até a foto real chegar). Foto real nova: rode `npm run imagens:otimizar` antes do commit
 - Nunca `href="mailto:"`: use `<LinkEmail>`; links de WhatsApp vêm de `linkWhatsApp()`
+- `next.config.ts` só usa `output: "standalone"` fora da Vercel; não force esse valor
+- Preview na Vercel por tag `preview-*` (`.github/workflows/deploy-preview.yml`)
 
 ## Branches
 

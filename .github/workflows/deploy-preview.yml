@@ -1,0 +1,52 @@
+# Preview na Vercel — para o cliente ver e aprovar mudanças antes do merge na main.
+# É o app completo (o site não tem banco), num deploy de prévia da Vercel.
+#
+# Gatilho: tag `preview-*` (ex.: preview-home-nova, preview-2026-11-21) ou
+# execução manual (aba Actions → Run workflow, escolhendo a branch).
+name: Deploy Preview
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.CONEXAOSAUDE_PROJECT_ID }}
+on:
+  push:
+    tags:
+      - 'preview-*'
+  workflow_dispatch:
+
+# Um preview por ref de cada vez; um novo push da mesma tag/branch cancela o
+# anterior em andamento.
+concurrency:
+  group: deploy-preview-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  Deploy-Preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.node-version'
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Build Project Artifacts
+        run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Deploy Project Artifacts to Vercel
+        id: deploy
+        run: |
+          url=$(vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }})
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+      - name: Publish preview URL
+        # URL no resumo da execução: é o link a enviar ao cliente.
+        run: |
+          {
+            echo "### Preview publicado"
+            echo ""
+            echo "- Ref: \`${{ github.ref_name }}\`"
+            echo "- URL: ${{ steps.deploy.outputs.url }}"
+          } >> "$GITHUB_STEP_SUMMARY"

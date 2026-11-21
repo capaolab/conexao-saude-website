@@ -53,6 +53,20 @@ As fotos ficam em `public/imagens/`, com os nomes mapeados em [`docs/imagens.md`
 
 Quem já viu a foto antiga pode continuar vendo-a por até 4 horas (cache do navegador). No dev, recarregue com Ctrl+Shift+R.
 
+## Preview na Vercel
+
+Serve para o cliente ver e aprovar uma mudança antes do merge na `main`. É o site completo, num deploy de prévia da Vercel (workflow [`deploy-preview.yml`](.github/workflows/deploy-preview.yml)).
+
+- **Gatilho:** push de uma tag `preview-*` ou execução manual pelo botão *Run workflow* na aba Actions, escolhendo a branch
+  ```bash
+  git tag preview-home-nova && git push origin preview-home-nova
+  ```
+- **O que o pipeline faz:** `vercel pull --environment=preview`, `vercel build` e `vercel deploy --prebuilt`. A URL do preview aparece no resumo da execução, pronta para enviar ao cliente
+- **Na Vercel o `output: 'standalone'` fica desligado** (`next.config.ts` testa a variável `VERCEL`): a Vercel empacota o app do jeito dela. O Docker continua com standalone
+- **Configuração (uma vez):**
+  - criar o projeto na Vercel (Framework: Next.js, raiz do repositório)
+  - no GitHub, secrets `VERCEL_TOKEN`, `VERCEL_ORG_ID` (os mesmos do capao-grande-website) e `CONEXAOSAUDE_PROJECT_ID` (Project ID do projeto na Vercel)
+
 ## Branches
 
 - `dev`: branch de integração. Os commits de funcionalidade vão direto para ela
