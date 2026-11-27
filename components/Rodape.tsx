@@ -44,8 +44,8 @@ export default function Rodape() {
         </div>
       </div>
       <div className="ft-b">
-        <span>© 2026 Instituto Conexão Saúde · CNPJ [00.000.000/0001-00]</span>
-        <span>Site por Capão Lab</span>
+        <span>© 2026 Instituto Conexão Saúde</span>
+        <span>por Capão Lab</span>
       </div>
     </footer>
   );

@@ -11,4 +11,13 @@ describe("Rodape", () => {
     expect(ig.getAttribute("target")).toBe("_blank");
     expect(ig.getAttribute("rel")).toBe("noopener");
   });
+
+  it("não pede CNPJ e credita a Capão Lab", () => {
+    const { container } = render(<Rodape />);
+    const texto = container.textContent ?? "";
+    expect(texto).not.toContain("CNPJ");
+    expect(texto).not.toContain("Site por");
+    expect(texto).toContain("© 2026 Instituto Conexão Saúde");
+    expect(texto).toContain("por Capão Lab");
+  });
 });
