@@ -3,14 +3,14 @@ export const CONTATO: {
   whatsapp: string;
   whatsappExibicao: string;
   instagram: string;
-  instagramUrl: string | null;
+  instagramUrl: string;
   mensagemPadrao: string;
 } = {
   email: "contato@institutoconexaosaude.org.br",
   whatsapp: "5575900000000",
   whatsappExibicao: "[(75) 9 0000-0000]",
-  instagram: "[@institutoconexaosaude]",
-  instagramUrl: null,
+  instagram: "@conexaosaudeinstituto",
+  instagramUrl: "https://www.instagram.com/conexaosaudeinstituto/",
   mensagemPadrao: "Olá! Vim pelo site do Instituto Conexão Saúde.",
 };
 

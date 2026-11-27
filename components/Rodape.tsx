@@ -36,13 +36,9 @@ export default function Rodape() {
               </a>
             </li>
             <li>
-              {CONTATO.instagramUrl ? (
-                <a href={CONTATO.instagramUrl} target="_blank" rel="noopener">
-                  Instagram
-                </a>
-              ) : (
-                <span style={{ display: "inline-block", padding: "6px 0" }}>Instagram [link]</span>
-              )}
+              <a href={CONTATO.instagramUrl} target="_blank" rel="noopener">
+                Instagram
+              </a>
             </li>
           </ul>
         </div>

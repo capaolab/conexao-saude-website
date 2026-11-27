@@ -5,6 +5,10 @@ describe("CONTATO", () => {
   it("whatsapp tem país e DDD, só dígitos", () => {
     expect(CONTATO.whatsapp).toMatch(/^55\d{10,11}$/);
   });
+  it("instagram do instituto", () => {
+    expect(CONTATO.instagram).toBe("@conexaosaudeinstituto");
+    expect(CONTATO.instagramUrl).toBe("https://www.instagram.com/conexaosaudeinstituto/");
+  });
 });
 
 describe("linkWhatsApp", () => {

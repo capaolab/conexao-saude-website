@@ -69,4 +69,12 @@ describe("Contato", () => {
     expect(container.querySelector('a[href^="mailto:"]')).toBeNull();
     expect(metaContato.title).toBe("Contato");
   });
+
+  it("o Instagram é link que abre em nova aba", () => {
+    render(<Contato />);
+    const ig = screen.getByRole("link", { name: CONTATO.instagram });
+    expect(ig.getAttribute("href")).toBe(CONTATO.instagramUrl);
+    expect(ig.getAttribute("target")).toBe("_blank");
+    expect(ig.getAttribute("rel")).toBe("noopener");
+  });
 });
