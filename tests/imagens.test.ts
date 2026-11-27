@@ -1,5 +1,6 @@
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
+import sharp from "sharp";
 import { describe, expect, it } from "vitest";
 import { IMAGENS } from "@/content/imagens";
 
@@ -38,4 +39,13 @@ describe("mapa de imagens", () => {
       .map((c) => c.slice(1, -1));
     for (const c of citados) expect(arquivos, c).toContain(c);
   });
+
+  it("fotos de galeria declaram a largura e a altura reais do arquivo", async () => {
+    for (const { arquivo, largura, altura } of Object.values(IMAGENS)) {
+      if (!/-\d+\.jpg$/.test(arquivo)) continue;
+      const m = await sharp(join(raiz, "public/imagens", arquivo)).metadata();
+      expect([m.width, m.height], arquivo).toEqual([largura, altura]);
+    }
+  });
 });
+

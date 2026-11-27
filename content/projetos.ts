@@ -17,6 +17,8 @@ export type Projeto = {
   status: string;
   lead: string;
   imagem: ImagemId;
+  // Fotos da seção Galeria, na ordem em que aparecem. Sem fotos, a seção some.
+  galeria?: ImagemId[];
   destaques: { valor: string; legenda: string }[];
   sobre: string[];
   beneficiosTitulo: string;
@@ -40,6 +42,14 @@ export const PROJETOS: Projeto[] = [
     status: "Ativo · Desde 2003",
     lead: "Atividades saudáveis ao ar livre que favorecem o desenvolvimento humano na sua integralidade, gerando saúde e bem-estar individual, social e ambiental.",
     imagem: "projeto-programa-conexao-saude-capa",
+    galeria: [
+      "projeto-programa-conexao-saude-1",
+      "projeto-programa-conexao-saude-2",
+      "projeto-programa-conexao-saude-3",
+      "projeto-programa-conexao-saude-4",
+      "projeto-programa-conexao-saude-5",
+      "projeto-programa-conexao-saude-6",
+    ],
     destaques: [
       { valor: "+100", legenda: "grupos formados" },
       { valor: "+3 mil", legenda: "pessoas alcançadas" },
@@ -84,6 +94,13 @@ export const PROJETOS: Projeto[] = [
     status: "Ativo · Desde 2024",
     lead: "Aulas regulares e semanais de Yoga para jovens e adultos, com o objetivo de promover a saúde física e mental.",
     imagem: "projeto-yoga-capa",
+    galeria: [
+      "projeto-yoga-1",
+      "projeto-yoga-2",
+      "projeto-yoga-3",
+      "projeto-yoga-4",
+      "projeto-yoga-5",
+    ],
     destaques: [
       { valor: "Semanal", legenda: "aulas regulares" },
       { valor: "2024", legenda: "início das turmas" },
@@ -173,6 +190,12 @@ export const PROJETOS: Projeto[] = [
     status: "Ativo · Desde 2017",
     lead: "Eventos anuais de trail running e formação de atletas, sempre com responsabilidade socioambiental.",
     imagem: "projeto-corrida-em-trilha-capa",
+    galeria: [
+      "projeto-corrida-em-trilha-1",
+      "projeto-corrida-em-trilha-2",
+      "projeto-corrida-em-trilha-3",
+      "projeto-corrida-em-trilha-4",
+    ],
     destaques: [
       { valor: "2017", legenda: "primeira edição" },
       { valor: "~300", legenda: "atletas no Campeonato Baiano 2026" },
@@ -219,6 +242,12 @@ export const PROJETOS: Projeto[] = [
     status: "Ativo · Desde 2011",
     lead: "Aulas regulares e gratuitas de circo para crianças, jovens e adultos de Caeté-Açu, em parceria com o Circo Ilha de Mato.",
     imagem: "projeto-circo-capa",
+    galeria: [
+      "projeto-circo-1",
+      "projeto-circo-2",
+      "projeto-circo-3",
+      "projeto-circo-4",
+    ],
     destaques: [
       { valor: "~50", legenda: "alunos por semestre" },
       { valor: "Gratuito", legenda: "para a comunidade" },
@@ -265,6 +294,12 @@ export const PROJETOS: Projeto[] = [
     status: "Ativo · Desde 2024",
     lead: "Iniciativa artística e cultural com mulheres e jovens quilombolas da Chapada Diamantina, para valorizar a cultura negra.",
     imagem: "projeto-ciranda-cultural-capa",
+    galeria: [
+      "projeto-ciranda-cultural-1",
+      "projeto-ciranda-cultural-2",
+      "projeto-ciranda-cultural-3",
+      "projeto-ciranda-cultural-4",
+    ],
     destaques: [
       { valor: "7", legenda: "comunidades quilombolas" },
       { valor: "4", legenda: "cidades" },
@@ -310,6 +345,12 @@ export const PROJETOS: Projeto[] = [
     status: "Ativo · Desde 2020",
     lead: "Educação à luz da pedagogia Waldorf para crianças de 2 a 6 anos, inspirada na cultura das infâncias, na arte, no brincar e no bem viver.",
     imagem: "projeto-yurta-curumim-capa",
+    galeria: [
+      "projeto-yurta-curumim-1",
+      "projeto-yurta-curumim-2",
+      "projeto-yurta-curumim-3",
+      "projeto-yurta-curumim-4",
+    ],
     destaques: [
       { valor: "~30", legenda: "famílias por ano" },
       { valor: "2 a 6", legenda: "anos de idade" },
