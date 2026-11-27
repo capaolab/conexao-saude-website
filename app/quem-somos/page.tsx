@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Imagem from "@/components/Imagem";
+import BioExpansivel from "@/components/BioExpansivel";
 import { CIDADES, EQUIPE, LINHA_DO_TEMPO } from "@/content/quem-somos";
 
 export const metadata: Metadata = { title: "Quem somos" };
@@ -107,9 +108,7 @@ export default function QuemSomos() {
                       {e.cargo}
                     </p>
                   </div>
-                  <p className="muted" style={{ margin: 0, fontSize: 15, lineHeight: "25px" }}>
-                    {e.bio}
-                  </p>
+                  <BioExpansivel texto={e.bio} nome={e.nome} />
                 </div>
               </li>
             ))}
