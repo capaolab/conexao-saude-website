@@ -49,10 +49,13 @@ describe("PROJETOS", () => {
     }
   });
 
-  it("projetos com fotos de galeria recebidas", () => {
-    const comFotos = PROJETOS.filter((p) => (p.galeria ?? []).length > 0).map((p) => p.slug);
-    expect(comFotos.sort()).toEqual(
-      ["ciranda-cultural", "circo", "corrida-em-trilha", "programa-conexao-saude", "yoga", "yurta-curumim"].sort(),
+  it("todos os projetos têm galeria", () => {
+    for (const p of PROJETOS) expect((p.galeria ?? []).length, p.slug).toBeGreaterThan(0);
+  });
+
+  it("a galeria do Futebol Vale Jogar tem as 6 fotos, em ordem", () => {
+    expect(projetoPorSlug("futebol-vale-jogar")!.galeria).toEqual(
+      [1, 2, 3, 4, 5, 6].map((n) => `projeto-futebol-vale-jogar-${n}`),
     );
   });
 });

@@ -85,6 +85,12 @@ Depois de colar as fotos, rode `npm run imagens:otimizar` (reduz o tamanho e rem
 | Arquivo | Onde aparece | Texto alternativo | Proporção / tamanho mínimo | Canvas tem a foto? |
 | --- | --- | --- | --- | --- |
 | `projeto-futebol-vale-jogar-capa.jpg` | Capa da página | Crianças jogando futebol na Escolinha Vale Jogar | 16:9, 1600 × 900 px (o cartão recorta em 4:3) | Sim |
+| `projeto-futebol-vale-jogar-1.jpg` | Galeria, foto 1 | Menino chuta a bola em direção ao gol enquanto o goleiro se prepara, no campo de terra | qualquer proporção (horizontal, 2400 × 1602 px); a miniatura recorta em 4:3 | Não |
+| `projeto-futebol-vale-jogar-2.jpg` | Galeria, foto 2 | Partida entre times de coletes laranja e verde no campo de terra em frente à escola | qualquer proporção (horizontal, 2400 × 1600 px); a miniatura recorta em 4:3 | Não |
+| `projeto-futebol-vale-jogar-3.jpg` | Galeria, foto 3 | Time de uniforme cinza entra em campo em fila, acenando para o público | qualquer proporção (horizontal, 2400 × 1600 px); a miniatura recorta em 4:3 | Não |
+| `projeto-futebol-vale-jogar-4.jpg` | Galeria, foto 4 | Crianças de colete verde e laranja disputando a bola perto do gol | qualquer proporção (horizontal, 2400 × 1602 px); a miniatura recorta em 4:3 | Não |
+| `projeto-futebol-vale-jogar-5.jpg` | Galeria, foto 5 | Crianças, educadores e famílias reunidos em um campo gramado | qualquer proporção (quadrada, 1079 × 1075 px); a miniatura recorta em 4:3 | Não |
+| `projeto-futebol-vale-jogar-6.jpg` | Galeria, foto 6 | Crianças pequenas jogando no campo de terra, com o público assistindo do barranco | qualquer proporção (horizontal, 1600 × 1039 px); a miniatura recorta em 4:3 | Não |
 | `projeto-corrida-em-trilha-capa.jpg` | Cartão em Outros projetos | Atleta em corrida de trilha com a serra ao fundo | 16:9, 1600 × 900 px (o cartão recorta em 4:3) | Sim |
 | `projeto-circo-capa.jpg` | Cartão em Outros projetos | Roda de crianças e educador nas aulas de circo | 16:9, 1600 × 900 px (o cartão recorta em 4:3) | Sim |
 | `projeto-ciranda-cultural-capa.jpg` | Cartão em Outros projetos | Participantes da Ciranda Cultural reunidas em comunidade quilombola | 16:9, 1600 × 900 px (o cartão recorta em 4:3) | Sim |

@@ -144,6 +144,14 @@ export const PROJETOS: Projeto[] = [
     status: "Ativo · 2009–2012 e desde 2023",
     lead: "Aulas regulares de futebol para crianças e adolescentes de 6 a 14 anos, com jogos e intercâmbios com times de cidades vizinhas.",
     imagem: "projeto-futebol-vale-jogar-capa",
+    galeria: [
+      "projeto-futebol-vale-jogar-1",
+      "projeto-futebol-vale-jogar-2",
+      "projeto-futebol-vale-jogar-3",
+      "projeto-futebol-vale-jogar-4",
+      "projeto-futebol-vale-jogar-5",
+      "projeto-futebol-vale-jogar-6",
+    ],
     destaques: [
       { valor: "~300", legenda: "crianças e adolescentes por ano" },
       { valor: "6 a 14", legenda: "anos de idade" },
