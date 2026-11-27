@@ -91,40 +91,25 @@ export default function QuemSomos() {
               <h2 className="h1">Quem cuida dos projetos</h2>
             </div>
             <p className="muted" style={{ margin: 0 }}>
-              [Fotos da equipe a receber do instituto]
+              A diretoria e as coordenações de área e de projeto do instituto.
             </p>
           </div>
-          <ul className="cols c3" style={{ listStyle: "none", margin: 0, padding: 0, gap: "0 40px" }}>
+          <ul className="cols c2 equipe">
             {EQUIPE.map((e) => (
-              <li
-                key={e.nome}
-                className="row"
-                style={{ gap: 16, padding: "20px 0", borderTop: "1px solid var(--line)", flexWrap: "nowrap" }}
-              >
-                <span
-                  aria-hidden="true"
-                  style={{
-                    flex: "none",
-                    width: 56,
-                    height: 56,
-                    borderRadius: "var(--radius-pill)",
-                    background: "var(--olive-soft)",
-                    color: "var(--brand)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontFamily: "var(--font-display)",
-                    fontWeight: 600,
-                    fontSize: 20,
-                  }}
-                >
-                  {e.iniciais}
-                </span>
-                <div className="stack" style={{ gap: 2 }}>
-                  <span className="h3" style={{ fontSize: 20, lineHeight: "28px" }}>
-                    {e.nome}
-                  </span>
-                  <span className="muted small">{e.funcao}</span>
+              <li key={e.nome} className="pessoa">
+                <Imagem id={e.imagem} className="pessoa-foto" sizes="120px" />
+                <div className="stack" style={{ gap: 12 }}>
+                  <div className="stack" style={{ gap: 2 }}>
+                    <h3 className="h3" style={{ fontSize: 22, lineHeight: "30px" }}>
+                      {e.nome}
+                    </h3>
+                    <p className="small" style={{ margin: 0, fontWeight: 700, color: "var(--brand)" }}>
+                      {e.cargo}
+                    </p>
+                  </div>
+                  <p className="muted" style={{ margin: 0, fontSize: 15, lineHeight: "25px" }}>
+                    {e.bio}
+                  </p>
                 </div>
               </li>
             ))}

@@ -30,6 +30,13 @@ Depois de colar as fotos, rode `npm run imagens:otimizar` (reduz o tamanho e rem
 | --- | --- | --- | --- | --- |
 | `quem-somos-espaco.jpg` | Abertura | Espaço do instituto no Vale do Capão, com gramado, tenda de circo e a serra ao fundo | 4:3, 1600 × 1200 px | Sim |
 | `quem-somos-historia.jpg` | Seção Nossa história (some no celular) | Mãos plantando uma muda na terra | 10:7, 1200 × 840 px | Sim |
+| `equipe-carlos-cesar-junior.jpg` | Coordenação, foto de Carlos Cesar Junior | vazio (o nome está ao lado) | 1:1, recortada no rosto, 800 × 800 px | Não |
+| `equipe-adroaldo-vasconcelos.jpg` | Coordenação, foto de Adroaldo Vasconcelos | vazio (o nome está ao lado) | 1:1, recortada no rosto, 800 × 800 px | Não |
+| `equipe-luanna-lima.jpg` | Coordenação, foto de Luanna Lima | vazio (o nome está ao lado) | 1:1, recortada no rosto, 800 × 800 px | Não |
+| `equipe-fabia-medeiros.jpg` | Coordenação, foto de Fábia Medeiros | vazio (o nome está ao lado) | 1:1, recortada no rosto, 800 × 800 px | Não |
+| `equipe-denise-debiasi.jpg` | Coordenação, foto de Denise Debiasi | vazio (o nome está ao lado) | 1:1, recortada no rosto, 800 × 800 px | Não |
+| `equipe-juliana-tourinho.jpg` | Coordenação, foto de Juliana Tourinho | vazio (o nome está ao lado) | 1:1, recortada no rosto, 800 × 800 px | Não |
+| `equipe-miriam-ribeiro.jpg` | Coordenação, foto de Miriam Ribeiro | vazio (o nome está ao lado) | 1:1, recortada no rosto, 800 × 800 px | Não |
 | `projeto-corrida-em-trilha-capa.jpg` | Seção com imagem ao lado do texto | Atleta em corrida de trilha com a serra ao fundo | 16:9, 1600 × 900 px (o cartão recorta em 4:3) | Sim |
 
 ## Projetos (`/projetos`)
