@@ -6,7 +6,7 @@ export const LINHA_DO_TEMPO = [
   { ano: "2020", texto: "Começa a Yurta Curumim. O Circo Ilha de Mato é reconhecido como Ponto de Cultura pela Secult/BA." },
   { ano: "2023", texto: "O Futebol Vale Jogar volta, com intercâmbios e eventos." },
   { ano: "2024", texto: "Nasce a Ciranda Cultural com comunidades quilombolas." },
-  { ano: "7 mai 2025", texto: "Fundação formal do Instituto Conexão Saúde." },
+  { ano: "2025", texto: "Fundação formal do Instituto Conexão Saúde." },
   { ano: "2026", texto: "Realização do Campeonato Baiano de Corrida em Trilha e Montanha no Vale do Capão." },
 ];
 

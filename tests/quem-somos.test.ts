@@ -10,4 +10,8 @@ describe("LINHA_DO_TEMPO", () => {
     );
     expect(texto("2026")).toBe("Realização do Campeonato Baiano de Corrida em Trilha e Montanha no Vale do Capão.");
   });
+
+  it("todo marco mostra só o ano", () => {
+    for (const m of LINHA_DO_TEMPO) expect(m.ano, m.texto).toMatch(/^\d{4}$/);
+  });
 });
