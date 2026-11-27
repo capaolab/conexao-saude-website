@@ -40,4 +40,20 @@ describe("PROJETOS", () => {
     expect(y?.ancoraParceria).toBe("p-Yoga");
     expect(y?.ficha).toContainEqual({ rotulo: "Coordenação", valor: "Denise Debiasi" });
   });
+
+  it("a galeria só tem fotos do próprio projeto, sem repetição", () => {
+    for (const p of PROJETOS) {
+      const galeria = p.galeria ?? [];
+      expect(new Set(galeria).size, p.slug).toBe(galeria.length);
+      for (const id of galeria) expect(id, p.slug).toMatch(new RegExp(`^projeto-${p.slug}-\\d+$`));
+    }
+  });
+
+  it("projetos com fotos de galeria recebidas", () => {
+    const comFotos = PROJETOS.filter((p) => (p.galeria ?? []).length > 0).map((p) => p.slug);
+    expect(comFotos.sort()).toEqual(
+      ["ciranda-cultural", "circo", "corrida-em-trilha", "programa-conexao-saude", "yoga", "yurta-curumim"].sort(),
+    );
+  });
 });
+

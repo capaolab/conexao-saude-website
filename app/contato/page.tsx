@@ -128,7 +128,15 @@ export default function Contato() {
           <div className="cols c3" style={{ gap: 32 }}>
             <div className="rule stack" style={{ gap: 4 }}>
               <p className="over">Instagram</p>
-              <p style={{ margin: 0, fontWeight: 700 }}>{CONTATO.instagram}</p>
+              <a
+                className="ics-link"
+                href={CONTATO.instagramUrl}
+                target="_blank"
+                rel="noopener"
+                style={{ alignSelf: "flex-start" }}
+              >
+                {CONTATO.instagram}
+              </a>
               <p className="muted small" style={{ margin: 0 }}>
                 Agenda e novidades dos projetos.
               </p>

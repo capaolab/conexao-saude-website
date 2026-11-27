@@ -258,3 +258,51 @@ html { scroll-padding-top: calc(var(--header-height) + 16px); }
   .sp-act { flex-direction: row !important; align-items: center; gap: 16px !important; }
   .sp-act .m-full { width: auto; }
 }
+
+/* Galeria de fotos do projeto e lightbox */
+.galeria { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.galeria-btn { display: block; width: 100%; padding: 0; border: 0; background: var(--olive-soft); cursor: zoom-in; border-radius: var(--radius-md); overflow: hidden; }
+.galeria-btn:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--focus); }
+.galeria-img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .3s; }
+.galeria-btn:hover .galeria-img { transform: scale(1.03); }
+.lb { position: fixed; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: rgb(18 22 14 / .95); color: #fff; overscroll-behavior: contain; }
+.lb[open] { display: grid; grid-template-rows: auto minmax(0, 1fr); }
+.lb::backdrop { background: transparent; }
+html:has(.lb[open]) { overflow: hidden; }
+.lb-topo { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 16px; }
+.lb-contador { margin: 0; font-weight: 700; font-variant-numeric: tabular-nums; }
+.lb-palco { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 0 16px 24px; min-height: 0; }
+.lb-foto { position: relative; height: 100%; min-height: 0; }
+.lb-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+.lb-btn { flex: none; width: 48px; height: 48px; display: inline-flex; align-items: center; justify-content: center; border-radius: var(--radius-pill); border: 1.5px solid rgb(255 255 255 / .5); background: rgb(0 0 0 / .35); color: #fff; cursor: pointer; }
+.lb-btn:hover { background: rgb(255 255 255 / .15); }
+.lb-btn:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+@media (max-width: 900px) {
+  .galeria { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+}
+@media (max-width: 600px) {
+  .lb-palco { grid-template-columns: 1fr 1fr; grid-template-rows: minmax(0, 1fr) auto; padding: 0 12px 16px; }
+  .lb-foto { grid-column: 1 / -1; grid-row: 1; }
+  .lb-ant { grid-row: 2; justify-self: start; }
+  .lb-prox { grid-row: 2; justify-self: end; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .galeria-img { transition: none; }
+  .galeria-btn:hover .galeria-img { transform: none; }
+}
+
+/* Coordenação (Quem somos) */
+.equipe { list-style: none; margin: 0; padding: 0; gap: 0 48px; }
+.pessoa { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 24px; align-items: start; padding: 32px 0; border-top: 1px solid var(--line); }
+.pessoa-foto { display: block; width: 120px; height: 120px; object-fit: cover; border-radius: var(--radius-pill); background: var(--olive-soft); }
+@media (max-width: 600px) {
+  .pessoa { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .pessoa-foto { width: 96px; height: 96px; }
+}
+
+
+/* Currículo da coordenação: 3 linhas com "Saiba mais" para expandir */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.bio { margin: 0; font-size: 15px; line-height: 25px; color: var(--ink-muted); display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; overflow: hidden; }
+.bio--aberta { display: block; -webkit-line-clamp: unset; line-clamp: none; overflow: visible; }
+.bio-btn { align-self: flex-start; padding: 0; background: none; border: 0; font: inherit; font-size: 15px; cursor: pointer; }

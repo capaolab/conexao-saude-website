@@ -3,6 +3,7 @@ import Imagem from "@/components/Imagem";
 import { linkWhatsApp } from "@/lib/contato";
 import { AREAS, projetoPorSlug, type Projeto } from "@/content/projetos";
 import CartaoProjeto from "./CartaoProjeto";
+import Galeria from "./Galeria";
 import SetaDireita from "./SetaDireita";
 
 export default function PaginaProjeto({ projeto }: { projeto: Projeto }) {
@@ -105,6 +106,18 @@ export default function PaginaProjeto({ projeto }: { projeto: Projeto }) {
           </aside>
         </div>
       </section>
+
+      {projeto.galeria && projeto.galeria.length > 0 && (
+        <section className="sec" style={{ paddingTop: 0 }}>
+          <div className="wrap stack" style={{ gap: 32 }}>
+            <div className="stack" style={{ gap: 12 }}>
+              <p className="over">Galeria</p>
+              <h2 className="h2">Fotos do projeto</h2>
+            </div>
+            <Galeria fotos={projeto.galeria} nome={projeto.nome} />
+          </div>
+        </section>
+      )}
 
       <section className="sec" style={{ paddingTop: 0 }}>
         <div className="wrap">

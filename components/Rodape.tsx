@@ -36,20 +36,21 @@ export default function Rodape() {
               </a>
             </li>
             <li>
-              {CONTATO.instagramUrl ? (
-                <a href={CONTATO.instagramUrl} target="_blank" rel="noopener">
-                  Instagram
-                </a>
-              ) : (
-                <span style={{ display: "inline-block", padding: "6px 0" }}>Instagram [link]</span>
-              )}
+              <a href={CONTATO.instagramUrl} target="_blank" rel="noopener">
+                Instagram
+              </a>
             </li>
           </ul>
         </div>
       </div>
       <div className="ft-b">
-        <span>© 2026 Instituto Conexão Saúde · CNPJ [00.000.000/0001-00]</span>
-        <span>Site por Capão Lab</span>
+        <span>© 2026 Instituto Conexão Saúde</span>
+        <span>
+          por{" "}
+          <a href="https://www.capaolab.com.br/" target="_blank" rel="noopener">
+            Capão Lab
+          </a>
+        </span>
       </div>
     </footer>
   );
