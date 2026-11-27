@@ -20,4 +20,12 @@ describe("Rodape", () => {
     expect(texto).toContain("© 2026 Instituto Conexão Saúde");
     expect(texto).toContain("por Capão Lab");
   });
+
+  it("o crédito tem link para a Capão Lab em nova aba", () => {
+    render(<Rodape />);
+    const link = screen.getByRole("link", { name: "Capão Lab" });
+    expect(link.getAttribute("href")).toBe("https://www.capaolab.com.br/");
+    expect(link.getAttribute("target")).toBe("_blank");
+    expect(link.getAttribute("rel")).toBe("noopener");
+  });
 });

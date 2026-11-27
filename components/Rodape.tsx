@@ -45,7 +45,12 @@ export default function Rodape() {
       </div>
       <div className="ft-b">
         <span>© 2026 Instituto Conexão Saúde</span>
-        <span>por Capão Lab</span>
+        <span>
+          por{" "}
+          <a href="https://www.capaolab.com.br/" target="_blank" rel="noopener">
+            Capão Lab
+          </a>
+        </span>
       </div>
     </footer>
   );
